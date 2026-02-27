@@ -1,0 +1,142 @@
+/* Timebox Grid Dark Theme */
+.timebox-grid-wrapper {
+  overflow: auto;
+  flex: 1;
+  border-radius: 6px;
+  border: 1px solid #2a3050;
+}
+
+.timebox-grid {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0f1422;
+  font-size: 12px;
+}
+
+.timebox-grid thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.timebox-grid th {
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #2a3050;
+  font-size: 12px;
+}
+
+.timebox-grid tbody tr {
+  border-bottom: 1px solid #2a3050;
+}
+
+.timebox-grid tbody tr:hover {
+  background-color: #151a2f;
+}
+
+.hour-cell {
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: 600;
+  background: #151a2f;
+  border-right: 1px solid #2a3050;
+  width: 55px;
+  min-width: 55px;
+  color: #a0a0a0;
+  font-size: 11px;
+}
+
+.timebox-cell {
+  padding: 6px;
+  border: 1px solid #2a3050;
+  vertical-align: top;
+  min-height: 70px;
+  background: #0f1422;
+}
+
+.timebox-item {
+  background: #1a1f3a;
+  border-left: 3px solid #667eea;
+  padding: 6px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  font-size: 11px;
+  border: 1px solid #2a3050;
+}
+
+.timebox-item:hover {
+  background: #252a3f;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.timebox-item.completed {
+  background: #1a3a1a;
+  border-left-color: #4ade80;
+  opacity: 0.85;
+}
+
+.timebox-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+  appearance: checkbox;
+  accent-color: #667eea;
+}
+
+.timebox-item span {
+  flex: 1;
+  color: #d0d0d0;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+.timebox-item.completed span {
+  text-decoration: line-through;
+  color: #808080;
+}
+
+.timebox-item button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 10px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timebox-item button:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .timebox-cell {
+    min-height: 60px;
+  }
+
+  .timebox-item {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .hour-cell {
+    width: 45px;
+    min-width: 45px;
+    font-size: 10px;
+  }
+}
